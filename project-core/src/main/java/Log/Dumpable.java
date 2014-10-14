@@ -10,7 +10,7 @@ import java.util.concurrent.ConcurrentHashMap;
  * Created by Justin on 2014/8/15.
  */
 public class Dumpable {
-    private static final Map<Class, Logger> staticLoggerMap = new ConcurrentHashMap<>();
+    private static final Map<Class, Logger> staticLoggerMap = new ConcurrentHashMap<Class, Logger>();
     private static final int LOGGER_POOL_THRESHOLD = 500;
 
     public Logger getLoggerForCurrentClass() {
