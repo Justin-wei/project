@@ -1,0 +1,13 @@
+project.ids
+*.iml
+*.ipr
+*.iws
+.idea
+*/*.log
+buildNumber.properties
+*/target/
+*.DS_Store
+*.classpath
+*.settings
+*.project
+
