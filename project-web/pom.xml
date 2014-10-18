@@ -34,11 +34,13 @@
             <artifactId>hibernate-annotations</artifactId>
             <version>3.5.6-Final</version>
         </dependency>
-        <dependency>
-            <groupId>postgresql</groupId>
-            <artifactId>postgresql</artifactId>
-            <version>9.0-801.jdbc4</version>
-        </dependency>
+        <!--<dependency>-->
+            <!-- we was used 9.0-801.jdbc, but we don't use it, its fine if we use glassfish to run this project, but its not ok to run it in tomact, if we want to
+             run success in tomact , we should use the Version 9.3-1102 to build and copy the jar file to tomact jar file-->
+            <!--<groupId>postgresql</groupId>-->
+            <!--<artifactId>postgresql</artifactId>-->
+            <!--<version>9.0-801.jdbc4</version>-->
+        <!--</dependency>-->
 
         <dependency>
             <groupId>org.springframework</groupId>

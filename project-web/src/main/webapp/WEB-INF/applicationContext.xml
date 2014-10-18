@@ -7,8 +7,10 @@ http://www.springframework.org/schema/context http://www.springframework.org/sch
     <context:annotation-config/>
     <context:component-scan base-package="adminService"/>
     <!-- jndi is used for this way ,the configuration is configured in glass fish localhost :4848-->
+    <!--if we used in glassfish we can set jndi name with jdbc/project but if we use tomaact we must set java:comp/env/jdbc/project inetead-->
     <bean id="dataSource" class="org.springframework.jndi.JndiObjectFactoryBean">
-        <property name="jndiName" value="jdbc/project"/>
+        <property name="jndiName" value="java:comp/env/jdbc/project"/>
+        <!--<property name="jndiName" value="jdbc/project"/>-->
     </bean>
     <!--this is traditional way to connect database ,jndi is better-->
     <!--<bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">-->
