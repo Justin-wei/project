@@ -20,6 +20,7 @@ public class LoginService extends Dumpable {
     private transient HibernateTemplate hibernateTemplate;
 
     public boolean validateLoginInfo(ProjectManager projectManager) {
+
         ProjectManager managerFromDateBase = getProjectManagerByUserName(projectManager.getUserName());
         return managerFromDateBase != null && managerFromDateBase.getPassWard().equals(projectManager.getPassWard());
     }
